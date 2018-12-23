@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+@font-face {
+      font-family: "DungGeunMo";
+      src: url("./font/DungGeunMo.eot");
+    }
+	
+body{background: url(img/bgimg.gif) repeat; background-size:cover; font-family: "DungGeunMo";}
+
+#Cplace {position: absolute; top:20px; left:220px;}
+#banner {position: absolute; top:30px; left:260px; animation: example 1s infinite;
+animation-direction: alternate;}
+
+@keyframes example {
+	from{top:30px;}
+	to{top:40px;}
+}
+
+
+
+#knife {position: absolute; top:210px; left:415px; cursor:pointer;}
+#salt {position: absolute; top: 210px; left:450px; cursor:pointer;}
+#bread {position: absolute; top:235px; left:385px; cursor:pointer;}
+
+#egg {position: absolute; top:200px; left:480px; cursor:pointer;}
+#pan {position: absolute; top:190px; left:510px; cursor:pointer;}
+
+#chicken {position: absolute; top:170px; left:530px; cursor:pointer;}
+#pot {position: absolute; top:140px; left:570px; cursor:pointer;}
+#water {position: absolute; top:185px; left:662px; cursor:pointer;}
+#yarn {position: absolute; top:300px; left:600px; cursor: pointer;}
+#clay {position: absolute; top:170px; left:620px; cursor: pointer;}
+#oven {position: absolute; top:220px; left:480px; cursor: pointer; background-color:none; width:80px; height: 40px;}
+
+
+
+
+#fire {position: absolute; top:150px; left:450px; background:url('./img/firework.gif'); width: 300px; height: 300px; display:none;}
+
+
+#body1{position: absolute; top:350px; left:400px; cursor:pointer;}
+#body2{position: absolute; top:370px; left:530px; cursor: pointer;}
+#body3{position: absolute; top:340px; left:690px; cursor: pointer;}
+
+#menu {position: absolute; top:300px; left:430px; display: none;}
+
+#scrollS {position: absolute; top:100px; left:10px; display:none; background:url('./img/scroll.png'); width: 367px; height: 415px;}
+
+#correct{position: absolute; top:290px; left:500px; background:url('./img/correct.gif'); width: 213px; height: 28px; display: none; cursor: pointer;}
+#fail{position: absolute; top:270px; left:550px; background:url('./img/fail.gif'); width: 166px; height: 28px; display: none;}
+
+
+
+
+#hannibal {position: absolute; left:700px; top:250px; cursor:pointer;}
+
+#chatBox {position:absolute; top:160px; left:760px; width:170px; height:110px; cursor:pointer; margin:0; background:url('./img/chat/pg_1.gif');}
+
+
+
+#container{ width:1200px; height:560px; position: relative; margin: auto; margin-top: 50px;}
+#rule{position: absolute; width: 268px; height: 151px; top:450px; left:970px; background:url('./img/rule.png');}
+
+</style>
+<head>
+	<title>Hannibal's Cooking Class</title>
+
+
+
+</head>
+<body>
+	
+
+<div id="container">
+	<div id="Cplace">
+		<img src="./img/cplace.png">
+	</div>
+	
+	
+	<div id="knife">
+		<img src="./img/knife.png">
+	</div>
+	<div id="salt">
+		<img src="./img/salt.png">
+	</div>
+	<div id="bread">
+		<img src="./img/bread.png">
+	</div>
+
+
+	<div id="egg">
+		<img src="./img/egg.png">
+	</div>
+	<div id="pan">
+		<img src="./img/pan.png">
+	</div>
+
+
+	<div id="chicken">
+		<img src="./img/chicken.png">
+	</div>
+	<div id="pot">
+		<img src="./img/pot.png">
+	</div>
+	<div id="water">
+		<img src="./img/water.png">
+	</div>
+
+	<div id="yarn">
+		<img src="./img/yarn.png">
+	</div>
+
+	<div id="clay">
+		<img src="./img/clay.png">
+	</div>
+
+	<div id="oven">
+	</div>
+
+
+	<div id="hannibal">
+		<img src="./img/hannibal.png">
+	</div>
+	<div id="body1">
+		<img src="./img/body_1.png">
+	</div>
+	<div id="body2">
+		<img src="./img/body_2.png">
+	</div>
+	<div id="body3">
+		<img src="./img/body_3.png">
+	</div>
+
+	<div id = "chatBox">
+		
+	</div>
+
+	<div id="menu">
+		<img src="./img/menu.gif">
+	</div>
+
+	<div id="fire">
+
+	</div>
+
+	<div id="correct">
+
+	</div>
+
+	<div id="fail">
+
+	</div>
+	
+	
+</div>
+
+<div id="rule">
+</div>
+
+<div id="scrollS">
+</div>
+
+<div id="banner">
+	<img src="./img/banner.png">
+</div>
+
+	<audio id="knifeM">
+		<source src="./music/knifeM.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="breadM">
+		<source src="./music/breadM.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="eggM">
+		<source src="./music/eggM.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="chickenM">
+		<source src="./music/chickenM.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="potM">
+		<source src="./music/potM.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="waterM">
+		<source src="./music/waterM.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="crowedM" autoplay="true">
+		<source src="./music/crowedM.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="chatM" autoplay="true">
+		<source src="./music/chat.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="bgmusic" autoplay="true">
+		<source src="./music/bgmusic.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="fireM">
+		<source src="./music/fireM.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="ovenM">
+		<source src="./music/ovenM.mp3" type="audio/mpeg">
+	</audio>
+
+<script type="text/javascript">
+
+	var body1Select = false;
+	var body2Select = false;
+	var body3Select = false;
+
+	var knifeCook = false;
+	var breadCook = false;
+	var saltCook = false;
+	var panCook = false;
+	var potCook = false;
+	var waterCook = false; 
+	var yarnCook = false;
+	var clayCook = false;
+	var ovenCook = false;
+
+
+	function checkProcess(){
+		console.log("체크프로세스를 시작합니다.");
+		console.log("현재 선택한 사람은 다음과 같습니다.");
+		console.log(body1Select, body2Select, body3Select);
+		if(body1Select == true){
+			console.log("1번사람 진입");
+			q = 6;
+		
+			
+			if(saltCook == true){ //바디1-첫번째
+				console.log("양념 선택, 맞습니다!");
+				
+
+				correct.style.display="inline";
+				
+				
+				
+				if(knifeCook == true){ //바디1-두번째
+					console.log("2단계 칼도 맞았네요!");
+				
+					correct.style.display="inline";
+					
+					
+
+					if(panCook == true){ //바디1-세번째
+						console.log("잘 해냈습니다!! 짝짝짝");
+
+						fireM.play();
+						fire.style.display = "inline";
+						scrollS.style.display = "none";
+						
+					} else{  //바디1-세번째 틀림
+						console.log("3단계가 틀렸네요 다시한번!");
+						
+						clearCook();//다클리어하고
+						
+
+						saltCook = true; //양념맞았으니 트루해주고
+						knifeCook = true; //나이프도 맞았으니 트루로
+						//만약 이거 안해주면 처음부터 한번에 세개를 순서대로 찍어야만 통과할 수 있느 방식임
+					}
+				}else{  //바디1-두번째 틀림
+					console.log("1단계는 양념 맞았는데 2단계가 틀렸어용");
+					i = 0;
+			
+					clearCook(); //다클리어하고
+					
+					
+					
+					
+					saltCook = true; //1단계는 맞았으니 트루로
+					//만약 이거 안해주면 처음부터 한번에 세개를 순서대로 찍어야만 통과할 수 있느 방식임
+				}
+			}else{ //바디1-첫번째 틀림
+				console.log("다른 선택을 해보세요");
+				i = 0;
+				correct.style.display="none";
+				fail.style.display="inline";
+				//1번 틀렸으니 모두 초기화
+				clearCook();
+			}		
+
+
+
+
+
+
+		}else if(body2Select == true){
+			//2번 사람의 요리순서
+			console.log("미트볼");
+
+			if(knifeCook == true){
+
+				correct.style.display="inline";
+				
+
+				
+				if(saltCook == true){
+
+					correct.style.display="inline";
+				
+
+					if(potCook == true){
+						console.log("맞았어요");
+						fireM.play();
+						fire.style.display = "inline";
+						scrollS.style.display = "none";
+
+
+					}else{
+						console.log("아쉽게 틀렸네요.");
+						clearCook();
+						knifeCook = true;
+						saltCook = true;
+
+					}
+
+				}else{
+					console.log("1번째는 맞았는데 두번째는 2");
+					clearCook();
+					knifeCook = true;
+
+				}			
+
+			}else{
+				console.log("다른 선택을 해보세요");
+				clearCook();
+				correct.style.display="none";
+				fail.style.display="inline";
+			}
+
+
+
+		}else if(body3Select == true){
+			//3번 사람의 요리 순서
+			console.log("로띠 드 뀌스");
+			if(saltCook == true){
+				correct.style.display="inline";
+
+				if(yarnCook == true){
+					correct.style.display="inline";
+
+					if(clayCook == true){
+						correct.style.display="inline";
+
+						if(ovenCook == true){
+							fire.style.display = "inline";
+							scrollS.style.display = "none";
+							fireM.play();
+						}else{
+							clearCook();
+							clayCook = true;
+							yarnCook = true;
+							saltCook = true;
+						}
+
+
+					}else{
+						clearCook();
+						yarnCook = true;
+						saltCook = true;
+
+					}
+				}else{
+					clearCook();
+					saltCook = true;
+
+				}
+
+			}else{
+				clearCook();
+				correct.style.display="none";
+				fail.style.display="inline";
+
+			}
+		}
+	}	
+
+
+	var imgA = ["./img/chat/pg_1", //0
+				"./img/chat/pg_2", //1
+				"./img/chat/pg_3", //2
+				"./img/chat/pg_4", //3
+				"./img/chat/pg_5", //4
+				"./img/chat/pg_6",]; //5  
+
+	var imgS = ["./img/chat/steak_1", //0
+				"./img/chat/steak_2", //1
+				"./img/chat/steak_3", //2
+				"./img/chat/steak_4", //3
+				"./img/chat/steak_5", //4
+				"./img/chat/steak_6",]; //5
+
+
+		var toggle = "off";
+		
+
+		chicken.onclick = function(){
+			chickenM.play();
+
+		}
+
+
+
+		knife.onclick = function(){
+			
+			knifeM.play();
+			knifeCook = true;
+			checkProcess(); //체크진행
+		}
+		
+		salt.onclick = function(){
+			
+
+			saltCook = true;
+			checkProcess(); //체크진행
+		}
+
+		bread.onclick = function(){
+
+			breadM.play();
+			breadCook = true;
+			checkProcess(); //체크진행
+		}
+
+		egg.onclick = function(){
+			eggM.play();
+			panCook = true;
+			checkProcess(); //체크진행
+		}
+
+		pot.onclick = function(){
+			potM.play();
+			potCook = true;
+			checkProcess(); //체크진행
+		}
+
+		water.onclick = function(){
+			waterM.play();
+			waterCook = true;
+			checkProcess(); //체크진행
+		}
+
+		yarn.onclick = function(){
+
+			yarnCook = true;
+			checkProcess();
+		}
+
+		clay.onclick = function(){
+
+			clayCook = true;
+			checkProcess();
+		}
+
+		oven.onclick = function(){
+			
+			ovenM.play();
+			ovenCook = true;
+			checkProcess();
+		}
+
+		hannibal.onclick =  function(){
+			hannibal.style.animationPlayState = "running";
+			chatBox.style.animationPlayState = "running";
+		}
+
+		function clearCook(){
+				knifeCook = false;
+				breadCook = false;
+				saltCook = false;
+				panCook = false;
+				potCook = false;
+				waterCook = false; 
+				yarinCook = false;
+				clayCook = false;
+				ovenCook = false;
+		}
+
+		var s = 0;
+
+		//모든 세팅을 초기화하고 채팅창 다시보이게
+		function init(){
+				chatBox.style.display = "inline";
+				menu.style.display = "none";
+				clearCook();
+
+		}
+
+		var q = 0; 
+
+		chatBox.onclick = function(){
+			chatM.play();
+
+			q++;
+			
+			//여기서 q가 6이 되면 더이상 늘어나지 않아야 에러가 안남
+			//콘솔에 에러가 나니까 q값찍어서 왜 에러나는지 체크
+			if(q<6){
+				var aText = "url('" +imgA[q]+ ".gif')";
+				console.log(q);
+				console.log(aText);
+				chatBox.style.background = aText;
+			}else{
+
+				chatBox.style.display = "none";
+				//document.getElementById("chatM").pause();
+				//이 사운드때문에 에러나니가 이 코드 삭제
+				//이건 이렇게 써야된다.
+				menu.style.display = "inline";
+			}	
+
+			//다끝났으니 챗창 사라지게 하고 메뉴나오도록 한 뒤 이후로는
+			//여기서는 끝내고 다른곳에서 시작
+		}
+
+
+		body1.onclick = function(){	
+			init(); //초기화부터 하고 한니발 이동시킴
+			hannibal.style.top = "300px";
+			hannibal.style.left= "480px";
+
+		
+			chatBox.style.background = "url('./img/chat/steak_1.gif')";
+
+			scrollS.style.background = "url('./img/scroll_steak.gif')";
+			scrollS.style.display = "inline";
+
+
+			//채팅창위치도 조절
+			chatBox.style.top = "210px";
+			chatBox.style.left = "540px";
+			
+			//1번사람으로 세팅
+			body1Select = true;
+			body2Select = false;
+			body3Select = false;
+			console.log("1번사람을 클릭했습니다");
+		}
+
+
+		body2.onclick = function(){
+			init();
+			hannibal.style.top = "300px";
+			hannibal.style.left= "600px";
+
+			chatBox.style.top = "220px";
+			chatBox.style.left = "660px";
+
+			chatBox.style.background = "url('./img/chat/meatball.gif')";
+
+
+			scrollS.style.background = "url('./img/scroll_meat.gif')";
+			scrollS.style.display = "inline";
+
+
+
+			//2번사람으로 세팅
+			body2Select = true;
+			body1Select = false;
+			body3Select = false;
+			console.log("2번사람을 클릭했습니다");
+		}
+
+		body3.onclick = function(){
+			init();
+			hannibal.style.top = "280px";
+			hannibal.style.left= "700px";
+
+			chatBox.style.top = "200px";
+			chatBox.style.left = "760px";
+
+			chatBox.style.background = "url('./img/chat/rottie.gif')";
+
+			scrollS.style.background = "url('./img/scroll_rottie.gif')";
+			scrollS.style.display = "inline";
+
+
+
+			//3번사람으로 세팅
+			body1Select = false;
+			body2Select = false;
+			body3Select = true;
+			console.log("3번사람을 클릭했습니다");
+		}
+
+
+		correct.onclick = function(){
+
+			fire.style.display = "none";
+			correct.style.display = "none";
+			fireM.pause();
+		}
+
+		fail.onclick = function(){
+
+			fail.style.display = "none";
+		}
+		
+		
+
+	//배경음악 일단 비활성화
+	//var bgPlay = 0;
+	//window.onmousemove = function(){
+	//	bgPlay++;
+	//	if(bgPlay == 1){ bgmusic.play();}
+	//
+
+
+	
+</script>
+
+</body>
+</html>
